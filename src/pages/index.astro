@@ -1,0 +1,25 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+const name = 'Benito Martinez';
+---
+
+<MainLayout title="Astro 101">
+
+	<h1>{name}</h1>
+	<p id='time'>Loading...</p>
+	<footer></footer>
+
+	<script>
+		const footer = document.querySelector('footer') as HTMLElement;
+		const counter = document.querySelector('#time') as HTMLElement;
+
+		footer.innerHTML = `Year ${new Date().getFullYear()}`;
+		setInterval(() => {
+			counter.innerHTML = `Current time: ${new Date().toLocaleTimeString()}`;
+		}, 1000);
+	</script>
+
+</MainLayout>
+
+

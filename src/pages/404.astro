@@ -1,0 +1,50 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="404">
+  <img
+    class="image-404"
+    src="http://salehriaz.com/404Page/img/404.svg"
+    width="300px"
+  />
+  <a href="/" class="btn-go-home">GO BACK HOME</a>
+</MainLayout>
+
+<style>
+  .image-404 {
+    position: relative;
+    z-index: 100;
+    pointer-events: none;
+  }
+
+  .btn-go-home {
+    position: relative;
+    z-index: 200;
+    margin: 15px auto;
+    width: 100px;
+    padding: 10px 15px;
+    border: 1px solid #ffcb39;
+    border-radius: 100px;
+    font-weight: 400;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 11px;
+
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  }
+
+  .btn-go-home:hover {
+    background-color: #ffcb39;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+  }
+</style>
